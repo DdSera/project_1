@@ -4,10 +4,11 @@ h1 {
   color: aqua;
 }
 
-p {
+.title_p {
   text-align: center;
   color: white;
-  background-color: #0939be;
+  font-size: 30px;
+  background-color: #292052;
   margin: 50px;
 
   font-family: "Exile", system-ui;
@@ -16,5 +17,23 @@ p {
 
   border: 20px solid black;
 
-  padding: 30px;
+  border-radius: 50px;
+  border-style: inset;
+  border-color: cadetblue;
+
+  padding: 20px;
+}
+
+.box1 {
+  background-color: bisque;
+  width: 150px;
+  height: 150px;
+}
+
+.box2 {
+  background-color: darkgrey;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 400px;
 }
