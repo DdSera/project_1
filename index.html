@@ -3,23 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OOP</title>
+    <title>OOP Concepts</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
     />
-    <script src="index.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
+
   <body>
-    <header class="d-flex justify-content-center py-3">
+    <!-- Navigation -->
+    <header class="d-flex justify-content-center py-3 bg-light shadow-sm">
       <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Home</a>
-        </li>
+        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Lessons</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Quiz</a></li>
         <li class="nav-item"><a href="#" class="nav-link">About</a></li>
@@ -28,135 +25,115 @@
         </li>
       </ul>
     </header>
-    <div
-      class="container d-flex flex-column justify-content-center align-items-center"
-    >
-      <h1 class="mt-2">Object Oriented Programming (OOP)</h1>
-      <h3>Learn OOP with real world examples</h3>
-    </div>
-    <div
-      class="container d-flex flex-column justify-content-center align-items-center"
-    >
-      <dl>
-        <dt><h5>What are the main OOP concepts</h5></dt>
-        <dd>
-          <ol class="text-center mx-auto">
-            <li>Encapsulation</li>
-            <li>Abstraction</li>
-            <li>Inheritance</li>
-            <li>Polymorphism</li>
-          </ol>
-        </dd>
-      </dl>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="concepts encap bg- data-aos="fade-down-right"">
-          <dl>
-            <dt><h3>Encapsulation</h3></dt>
-            <dd>Hiding internal details and showing only what's necessary.</dd>
+    <!-- Hero Section -->
+    <section class="container text-center py-5">
+      <h1 class="mb-3">Object Oriented Programming (OOP)</h1>
+      <h3 class="text-muted">Learn OOP with real world examples</h3>
+    </section>
+
+    <!-- OOP Concepts List -->
+    <section class="container text-center my-4">
+      <h5 class="mb-3">What are the main OOP concepts?</h5>
+      <ul class="list-unstyled">
+        <li>Encapsulation</li>
+        <li>Abstraction</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+      </ul>
+    </section>
+
+    <!-- Concepts Explanation Grid -->
+    <section class="container">
+      <div class="row gy-4">
+        <!-- Encapsulation -->
+        <div class="col-md-6 col-sm-12">
+          <div
+            class="concepts bg-light p-4 shadow-sm rounded"
+            data-aos="fade-up-right"
+          >
+            <h3>Encapsulation</h3>
             <p>
-              It means wrapping data (variables) and code (methods) together
-              into a single unit (class).
+              Wrapping data and methods into a single unit, usually a class.
             </p>
             <p>
-              It protects the data by making variables private and accessing
-              them via getters/setters.
+              Access modifiers (like private) hide internal data from outside.
             </p>
-            <pre>
-      <code>
-        class Person { 
-          private String name; // data hidden 
-          public void setName(String n) { name = n; } 
-          public String getName() { return name; }
-        }
-      </code>
-      </pre>
-            <p>hjid fasdfi dfas</p>
-          </dl>
+            <pre><code>class Person {
+  private String name;
+  public void setName(String n) { name = n; }
+  public String getName() { return name; }
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- Abstraction -->
+        <div class="col-md-6 col-sm-12">
+          <div
+            class="concepts bg-light p-4 shadow-sm rounded"
+            data-aos="fade-up-left"
+          >
+            <h3>Abstraction</h3>
+            <p>Hiding complex details and showing only essential features.</p>
+            <pre><code>abstract class Animal {
+  abstract void makeSound();
+}
+class Dog extends Animal {
+  void makeSound() {
+    System.out.println("Woof");
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- Inheritance -->
+        <div class="col-md-6 col-sm-12">
+          <div
+            class="concepts bg-light p-4 shadow-sm rounded"
+            data-aos="fade-up-right"
+          >
+            <h3>Inheritance</h3>
+            <p>Allows one class to acquire the properties of another class.</p>
+            <pre><code>class Animal {
+  void eat() { System.out.println("eating..."); }
+}
+class Dog extends Animal {
+  void bark() { System.out.println("barking..."); }
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- Polymorphism -->
+        <div class="col-md-6 col-sm-12">
+          <div
+            class="concepts bg-light p-4 shadow-sm rounded"
+            data-aos="fade-up-left"
+          >
+            <h3>Polymorphism</h3>
+            <p>
+              Allows the same method to behave differently in different classes.
+            </p>
+            <pre><code>class Animal {
+  void sound() { System.out.println("Some sound"); }
+}
+class Dog extends Animal {
+  void sound() { System.out.println("Bark"); }
+}</code></pre>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="concepts encap">
-          <dl>
-            <dt><h3>Encapsulation</h3></dt>
-            <dd>Hiding internal details and showing only what's necessary.</dd>
-            <p>
-              It means wrapping data (variables) and code (methods) together
-              into a single unit (class).
-            </p>
-            <p>
-              It protects the data by making variables private and accessing
-              them via getters/setters.
-            </p>
-            <pre>
-      <code>
-        class Person { 
-          private String name; // data hidden 
-          public void setName(String n) { name = n; } 
-          public String getName() { return name; }
-        }
-      </code>
-      </pre>
-          </dl>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="concepts encap">
-          <dl>
-            <dt><h3>Encapsulation</h3></dt>
-            <dd>Hiding internal details and showing only what's necessary.</dd>
-            <p>
-              It means wrapping data (variables) and code (methods) together
-              into a single unit (class).
-            </p>
-            <p>
-              It protects the data by making variables private and accessing
-              them via getters/setters.
-            </p>
-            <pre>
-      <code>
-        class Person { 
-          private String name; // data hidden 
-          public void setName(String n) { name = n; } 
-          public String getName() { return name; }
-        }
-      </code>
-      </pre>
-          </dl>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="concepts encap">
-          <dl>
-            <dt><h3>Encapsulation</h3></dt>
-            <dd>Hiding internal details and showing only what's necessary.</dd>
-            <p>
-              It means wrapping data (variables) and code (methods) together
-              into a single unit (class).
-            </p>
-            <p>
-              It protects the data by making variables private and accessing
-              them via getters/setters.
-            </p>
-            <pre>
-                <code>
-                      class Person { 
-                        private String name; // data hidden 
-                        public void setName(String n) { name = n; } 
-                        public String getName() { return name; }
-                      }
-                 </code>
-              </pre>
-          </dl>
-        </div>
-      </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5 bg-light">
+      <p class="mb-0">&copy; 2025 LearnOOP. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="index.js"></script>
   </body>
 </html>
